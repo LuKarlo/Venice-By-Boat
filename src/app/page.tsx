@@ -5,8 +5,8 @@ export default function Home() {
   return (
     <div className="hero-container">
       <NavBar />
-      <div className="overlay-text" style={{display: "none"}}>
-        <h1 className="main-title">
+      <div className="overlay-text">
+        <h1 className="main-title permanent-marker-regular">
           VENEZIA <br /> <span className="evidence hand-drawn-underline">IN BARCA</span>
         </h1>
 

@@ -1,0 +1,56 @@
+nav {
+  width: 100%;
+  height: 10vh;
+  position: absolute;
+  top: 0;
+  display: flex;
+}
+nav .side-navBar {
+  flex: 1;
+}
+nav .side-navBar img {
+  height: 100%;
+  width: auto;
+}
+nav .side-navBar:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+nav .side-navBar:last-child .cta {
+  padding: 0.75rem 1.5rem;
+  background: yellow;
+  color: #000;
+  border-radius: 5rem;
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+}
+nav .side-navBar:last-child .cta svg {
+  transform: translateY(0.1rem);
+}
+nav .center-navBar {
+  flex: 2;
+}
+nav .center-navBar ul {
+  height: 100%;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+nav .center-navBar ul li {
+  flex: 1;
+  height: 100%;
+}
+nav .center-navBar ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav div {
+  padding: 1rem;
+}/*# sourceMappingURL=navBar.css.map */

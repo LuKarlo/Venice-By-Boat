@@ -1,0 +1,67 @@
+nav{
+    width: 100%;
+    height: 10vh;
+    position: absolute;
+    top: 0;
+    display: flex;
+
+    .side-navBar{
+        flex: 1;
+
+        img{
+            height: 100%;
+            width: auto;
+        }
+
+        &:last-child{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+
+            .cta{
+                padding: .75rem 1.5rem;
+                background:yellow;
+                color: #000;
+                border-radius: 5rem;
+                display: flex;
+                gap: 1rem;
+                cursor: pointer;
+
+                svg{
+                    transform: translateY(.1rem);
+                }
+            }
+        }
+    }
+
+    .center-navBar{
+        flex: 2;
+
+        ul{
+            height: 100%;
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+
+            li{
+                flex: 1;
+                height: 100%;
+
+                a{
+                    width: 100%;
+                    height: 100%;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+    div{
+        padding: 1rem;
+    }
+}

@@ -12,6 +12,7 @@
   --foreground: #171717;
   --venezia-cyan: #29e7ff;
   --venezia-dark-blue: #0a1b2e;
+  --accent: #fbe606;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,6 +21,7 @@
     --foreground: #ededed;
     --venezia-cyan: #29e7ff;
     --venezia-dark-blue: #0a1b2e;
+    --accent: #fbe606;
   }
 }
 

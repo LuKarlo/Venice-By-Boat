@@ -1,67 +1,111 @@
-nav{
-    width: 100%;
-    height: 10vh;
+// Mixins per la responsività
+@mixin mobile { @media (max-width: 768px) { @content; } }
+@mixin tablet { @media (max-width: 1100px) { @content; } }
+
+.main-nav {
+  width: 100%;
+  height: 12vh; // Leggermente più alta per il logo
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  position: absolute; // Sopra la hero
+  top: 0;
+  left: 0;
+  z-index: 100;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  .side-navBar {
+    flex: 1;
     display: flex;
-    font-size: 1rem;
-    text-transform: uppercase;
+    align-items: center;
+    padding: 0;
 
-    .side-navBar{
-        flex: 1;
-
-        img{
-            height: 100%;
-            width: auto;
-        }
-
-        &:last-child{
-            display: flex;
-            align-items: center;
-            justify-content: end;
-
-            .cta{
-                padding: .75rem 1.5rem;
-                background: var(--accent);
-                color: #000;
-                border-radius: 5rem;
-                display: flex;
-                gap: 1rem;
-                cursor: pointer;
-
-                svg{
-                    transform: translateY(.1rem);
-                }
-            }
-        }
+    &.logo-area {
+      height: 100%;
+      img {
+        height: clamp(60px, 8vh, 90px);
+        width: auto;
+        object-fit: contain;
+      }
     }
 
-    .center-navBar{
-        flex: 2;
+    &.cta-area {
+      justify-content: flex-end;
+      gap: 1.5rem;
+    }
+  }
 
-        ul{
-            height: 100%;
-            display: flex;
-            list-style: none;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
+  .center-navBar {
+    flex: 2;
+    height: 100%;
 
-            li{
-                flex: 1;
-                height: 100%;
+    @include tablet {
+      display: none; // Nasconde i link su tablet/mobile
+    }
 
-                a{
-                    width: 100%;
-                    height: 100%;
+    ul {
+      height: 100%;
+      display: flex;
+      list-style: none;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
 
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-            }
+      li {
+        a {
+          color: white; // Bianco per contrastare sulla foto
+          font-size: 0.9rem;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: var(--venezia-cyan);
+          }
         }
+      }
+    }
+  }
+
+  // Stile Bottone "Prenota Ora"
+  .cta-button {
+    padding: 0.8rem 1.8rem;
+    background: var(--accent);
+    color: var(--venezia-dark-blue);
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 800;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    white-space: nowrap;
+
+    svg {
+      font-size: 1.2rem;
     }
 
-    div{
-        padding: 1rem;
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
+
+    @include mobile {
+      display: none; // Nasconde il testo prenota su mobile molto piccolo se necessario
+    }
+  }
+
+  // Icona Hamburger per Mobile
+  .mobile-menu-icon {
+    display: none;
+    color: white;
+    font-size: 2.2rem;
+    cursor: pointer;
+
+    @include tablet {
+      display: block;
+    }
+  }
 }

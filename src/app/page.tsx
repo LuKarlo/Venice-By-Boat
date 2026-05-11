@@ -60,22 +60,34 @@ export default function Home() {
 
       <section className="features-bar">
         <div className="feature-item">
-          <span className="icon">🛥️</span>
+          <span className="icon">
+            <img src="/Venice-By-Boat/wavesScenary.svg" />
+            <div id="blob"></div>
+          </span>
           <h3>VISTA UNICA</h3>
           <p>Scopri Venezia da prospettive che solo la barca può offrirti.</p>
         </div>
         <div className="feature-item">
-          <span className="icon">📸</span>
+          <span className="icon">
+            <img src="/Venice-By-Boat/cameraIcon.svg" />
+            <div id="blob" className="odd"></div>
+          </span>
           <h3>ESPERIENZE</h3>
           <p>Piccoli gruppi, guide locali e tanta passione.</p>
         </div>
         <div className="feature-item">
-          <span className="icon">⚓</span>
+          <span className="icon">
+            <img src="/Venice-By-Boat/boatIcon.svg" />
+            <div id="blob"></div>
+          </span>
           <h3>COMFORT</h3>
           <p>Barche moderne e sicure per un'esperienza al top.</p>
         </div>
         <div className="feature-item">
-          <span className="icon">❤️</span>
+          <span className="icon">
+            <img src="/Venice-By-Boat/heartIcon.svg" />
+            <div id="blob" className="odd"></div>
+          </span>
           <h3>PER TUTTI</h3>
           <p>Tour perfetti per amici, coppie e famiglie.</p>
         </div>

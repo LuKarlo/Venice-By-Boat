@@ -1,11 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export", // Obbligatorio per GitHub Pages
+  output: "export", 
   basePath: "/Venice-By-Boat",
   images: {
-    unoptimized: true, // GitHub Pages non supporta l'ottimizzazione immagini di Next.js
+    unoptimized: true,
   },
+  allowedDevOrigins: ['127.0.0.1:3000', 'localhost:3000'], 
 };
 
 export default nextConfig;

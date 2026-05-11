@@ -1,9 +1,9 @@
 .hero-container {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   min-height: 700px;
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("/Venice-By-Boat/Venice-by-boat-tour-image.jpeg");
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.25)), url("/Venice-By-Boat/Venice-by-boat-tour-image.jpeg");
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -141,6 +141,9 @@
     display: none;
   }
 }
+.badge-container {
+  margin-top: 30%;
+}
 .badge-container .badge-circolare {
   width: clamp(160px, 20vw, 220px);
   height: clamp(160px, 20vw, 220px);
@@ -175,12 +178,13 @@
 
 .paper-divider {
   position: absolute;
-  bottom: -1px;
+  bottom: 0px;
   left: 0;
   width: 100%;
-  height: 80px;
+  height: 10rem;
   background: var(--background);
-  clip-path: polygon(0% 50%, 5% 40%, 10% 55%, 15% 35%, 22% 55%, 30% 40%, 38% 60%, 45% 35%, 55% 55%, 65% 40%, 75% 60%, 85% 35%, 93% 55%, 100% 45%, 100% 100%, 0% 100%);
+  -webkit-mask: radial-gradient(9.65vw at 50% 13.25vw, #000 99%, rgba(0, 0, 0, 0) 101%) calc(50% - 10vw) 0/20vw 100%, radial-gradient(9.65vw at 50% -8.25vw, rgba(0, 0, 0, 0) 99%, #000 101%) 50% 5vw/20vw 100% repeat-x;
+          mask: radial-gradient(9.65vw at 50% 13.25vw, #000 99%, rgba(0, 0, 0, 0) 101%) calc(50% - 10vw) 0/20vw 100%, radial-gradient(9.65vw at 50% -8.25vw, rgba(0, 0, 0, 0) 99%, #000 101%) 50% 5vw/20vw 100% repeat-x;
 }
 
 .features-bar {
@@ -202,9 +206,34 @@
   }
 }
 .features-bar .feature-item .icon {
+  position: relative;
   font-size: 2.5rem;
   display: block;
   margin-bottom: 10px;
+  z-index: 2;
+  display: flex;
+}
+@media (max-width: 768px) {
+  .features-bar .feature-item .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.features-bar .feature-item .icon img {
+  z-index: 2;
+}
+.features-bar .feature-item .icon #blob {
+  width: 3rem;
+  height: 3rem;
+  background: var(--accent);
+  border-radius: 50%;
+  z-index: 1;
+  margin-left: -1rem;
+  margin-top: -1rem;
+}
+.features-bar .feature-item .icon #blob.odd {
+  background: var(--venezia-cyan);
 }
 .features-bar .feature-item h3 {
   color: var(--venezia-dark-blue);
